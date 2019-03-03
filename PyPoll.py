@@ -76,3 +76,18 @@ print(f"Winner: {ElectionWinner}")
 
 print("-----------------------------------")
 
+#export text file
+p = open("PyPoll.txt","w+")
+p.write("Election Results\n")
+p.write("-----------------------------------\n")
+p.write(f"Total Votes: {len(TotalVotes)}\n")
+p.write("-----------------------------------\n")
+p.write(f'Khan: {(format((Khan_percent_votes), ".3%"))} ({len(TotalKhan)})\n')
+p.write(f'Correy: {(format((Correy_percent_votes), ".3%"))} ({len(TotalCorrey)})\n')
+p.write(f'Li: {(format((Li_percent_votes), ".3%"))} ({len(TotalLi)})\n')
+p.write(f"O'Tooley: {(format((OTooley_percent_votes), '.3%'))} ({len(TotalOTooley)})\n")
+
+p.write("-----------------------------------\n")
+p.write(f"Winner: {ElectionWinner}\n")
+
+p.write("-----------------------------------\n")

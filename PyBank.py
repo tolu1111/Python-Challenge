@@ -43,4 +43,13 @@ print(f"Avereage Revenue Change: {round(avg_PL_Change,2)}")
 print(f"Greatest Increase in Revenue: {max_PL_Change_date}, {max_PL_Change}")
 print(f"Greatest Decrease in Revenue: {min_PL_Change_date}, {min_PL_Change}") 
 
-
+#export text file
+p = open("PyBank.txt","w+")  
+p.write("Financial Analysis\n")
+p.write("-----------------------------------\n")  
+p.write(f"Total Months: {len(Date)}\n")    
+p.write(f"Total Revenue: {sum(Profit_loss)}\n")
+p.write(f"Avereage Revenue Change: {round(avg_PL_Change,2)}\n")
+p.write(f"Greatest Increase in Revenue: {max_PL_Change_date}, {max_PL_Change}\n")
+p.write(f"Greatest Decrease in Revenue: {min_PL_Change_date}, {min_PL_Change}\n")
+p.close()
